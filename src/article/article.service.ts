@@ -13,8 +13,8 @@ export class ArticleService {
     return await this.prisma.article.create({data})
   }
 
-  findAll() {
-    return `This action returns all article`;
+  async findAll() {
+    return await
   }
 
   findOne(id: number) {
