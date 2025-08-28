@@ -19,8 +19,7 @@ Content-Type: application/json
 
 {
   "title": "Getting Started with Python for Web App",
-  "content": "This is an intermediate lectures to Django framework...",
-  "author": "John Doe"
+  "content": "This is an intermediate lectures to Django framework..."
 }
 
 ###

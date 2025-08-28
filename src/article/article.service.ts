@@ -14,7 +14,9 @@ export class ArticleService {
   }
 
   async findAll() {
-    return await
+    const articles = await this.prisma.article.findMany()
+    console.log(articles)
+    return articles
   }
 
   findOne(id: number) {
