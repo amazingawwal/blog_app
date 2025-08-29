@@ -39,25 +39,34 @@ DELETE	/articles/:id	-- Delete an article by ID
 
 
 # Setup Instructions
+
 ## Clone the repository
-```git clone [<blog-app>](https://github.com/amazingawwal/blog_app)
-   cd blog_api
+
+```
+git clone https://github.com/amazingawwal/blog_app
+```
+```
+  cd blog_api
 ```
 
 ## Install dependencies
-```npm install
+``` 
+npm install
 ```
 
 ## Run migrations
-```npx prisma migrate dev --name initial-db-migration
+```
+npx prisma migrate dev --name initial-db-migration
 ```
 
 # Generate Prisma Client
-```npx prisma generate
+```
+npx prisma generate
 ```
 
 # Start the server
-``` npm run start:dev
+``` 
+npm run start:dev
 ```
 
 # Swagger API Documentation
