@@ -4,10 +4,9 @@
 // export class UpdateArticleDto extends PartialType(CreateArticleDto) {}
 
 export class UpdateArticleDto {
-id : number
-title :string
-content : string
-createdAt : Date
-updatedAt : Date
-
+  id: number;
+  title: string;
+  content: string;
+  createdAt: Date;
+  updatedAt: Date;
 }
