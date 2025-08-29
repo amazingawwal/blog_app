@@ -33,8 +33,13 @@ export class ArticleService {
     return result
   }
 
-  update(id: number, updateArticleDto: UpdateArticleDto) {
-    return `This action updates a #${id} article`;
+  async update(id: number, data: Article): Promise<Article> {
+    return await this.prisma.article.update({
+      where:{
+        id
+      },
+      data
+    })
   }
 
   remove(id: number) {
