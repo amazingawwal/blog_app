@@ -69,6 +69,7 @@ export class ArticleService {
       },
     });
     console.log(`Article with ID: ${id} successfully deleted`)
+    return `Article with ID: ${id} successfully deleted`
   }
   catch(e){
     throw new HttpException({

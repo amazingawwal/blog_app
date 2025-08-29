@@ -48,5 +48,5 @@ Content-Type: application/json
 }
 
 ###
-DELETE http://localhost:3000/article/10 HTTP/1.1
+DELETE http://localhost:3000/article/5 HTTP/1.1
 
