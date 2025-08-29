@@ -41,7 +41,8 @@ DELETE	/articles/:id	-- Delete an article by ID
 # Setup Instructions
 ## Clone the repository
 ```git clone [<blog-app>](https://github.com/amazingawwal/blog_app)
-cd blog_api
+```
+```cd blog_api
 ```
 
 ## Install dependencies
