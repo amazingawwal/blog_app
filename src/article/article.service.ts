@@ -38,24 +38,6 @@ export class ArticleService {
     return result;
   }
 
-  // async update(id: number, data: Article): Promise<Article> {
-  //   try{
-  //     const result = await this.prisma.article.update({
-  //       where:{
-  //         id
-  //       },
-  //       data
-  //     })
-  //     if(!result){
-  //       throw new HttpException('Forbidden', HttpStatus.FORBIDDEN);
-  //     }
-  //     return result;
-  //   }
-  //   catch(e){
-  //     return e
-  //   }
-  // }
-
   async update(id: number, data: Article): Promise<Article> {
     try {
       const result = await this.prisma.article.update({
@@ -65,25 +47,36 @@ export class ArticleService {
         data,
       });
       return result;
-    } catch (e) {
+    } catch (error) {
       throw new HttpException(
         {
           status: HttpStatus.FORBIDDEN,
-          error: 'This is a custom message',
+          error: 'Invalid ID, could not update your article. Check the input ID and try again ',
         },
         HttpStatus.FORBIDDEN,
         {
-          cause: e,
+          cause: error,
         },
       );
     }
   }
 
   async remove(id: number) {
-    return await this.prisma.article.delete({
+    try{
+     await this.prisma.article.delete({
       where: {
         id,
       },
     });
+    console.log(`Article with ID: ${id} successfully deleted`)
+  }
+  catch(e){
+    throw new HttpException({
+      status: HttpStatus.FORBIDDEN,
+      error: `Error: Could not found ID: ${id}. No Article deleted. `,
+    }, HttpStatus.FORBIDDEN, {
+      cause: e
+    });
+  }
   }
 }
