@@ -65,4 +65,17 @@ Swagger UI is available at:
 [Swagger API](http://localhost:3000/api)
 
 
+# Testing with test.rest
+This project includes a test.rest file for use with the REST Client VS Code extension.
+
+- Install the extension: REST Client
+
+- Open test.rest in VS Code
+
+- Click “Send Request” above any endpoint request
+
+- View the response in the editor.
+
+
+## -----------------------------------------------------------------------------
 Built with ❤️ by yours truly @amazingAwwal
